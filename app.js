@@ -36,4 +36,10 @@ if (response.data.data.length > 0) {
 
     // Create img element and set src attribute the GIF URL
     const $newGif = $("<img>", { src: gifUrl, class: "gif" });
+
+    //append gif to gif container
+
+    $gifContainer.append($newGif);
+} else {
+    
 }
