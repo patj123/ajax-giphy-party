@@ -25,9 +25,8 @@ $form.on("submit", async function(event) {
     } catch (error) {
         console.error("Error fetching data from Giphy API:", error);
     }
-});
 
-//are there any results?
+    //are there any results?
 
 if (response.data.data.length > 0) {
     //This gets a random gif from the results
@@ -41,5 +40,9 @@ if (response.data.data.length > 0) {
 
     $gifContainer.append($newGif);
 } else {
-    
+    console.log("No GIFs were found in that search term.")
+} catch (error) {
+    console.error("Error fetching data from Giphy API:", error);
 }
+});
+
