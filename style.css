@@ -30,8 +30,9 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     gap: 10px;
+    flex-wrap: wrap;
+    /* Allow wrapping for small screens */
 }
 
 /* Input field styling */
@@ -50,6 +51,14 @@ h1 {
     border-color: #007bff;
     outline: none;
     box-shadow: inset 1px 1px 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Button container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 /* Button styling */
@@ -78,7 +87,6 @@ button {
 #remove-images {
     background-color: #dc3545;
     color: white;
-    margin-top: 20px;
     width: 100%;
     max-width: 150px;
 }
@@ -114,12 +122,10 @@ button {
 @media (max-width: 768px) {
     #search-form {
         flex-direction: column;
+        align-items: center;
     }
 
-    #search-term {
-        max-width: 100%;
-    }
-
+    #search-term,
     button {
         max-width: 100%;
     }
@@ -132,12 +138,11 @@ button {
 @media (max-width: 480px) {
     #search-form {
         flex-direction: column;
-        align-items: stretch;
+        align-items: center;
     }
 
     #search-term,
-    #search-form button,
-    #remove-images {
+    button {
         width: 100%;
     }
 
