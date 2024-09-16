@@ -14,5 +14,15 @@ $form.on("submit", async function(event) {
     //getting search term from input field
     const term = $searchTerm.val();
 
-    
-})
+    try {
+        const response = await axios.get("http://api.giphy.com/v1/gifs/search", {
+            params: {
+                q: term,
+                api_key: "MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym"
+            }
+        });
+        console.log(response.data) 
+    } catch (error) {
+        console.error("Error fetching data from Giphy API:", error);
+    }
+});
