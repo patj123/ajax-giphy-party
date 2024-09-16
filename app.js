@@ -45,5 +45,5 @@ $form.on("submit", async function (event) {
 
 //This will handel removing images/gifs
 $removeButton.on("click", function() {
-    $gifContainer.empty()
+    $gifContainer.empty() //removing all child elements from gif container
 })
