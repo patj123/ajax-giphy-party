@@ -4,6 +4,7 @@ console.log("Let's get this party started!");
 const $form = $("#search-form");
 const $searchTerm = $("#search-term");
 const $gifContainer = $("#gif-container"); // Make sure this matches the ID in your HTML
+const $removeButton = $("#remove-images"); //This removes all images/gifs
 
 // Handle form submission
 $form.on("submit", async function (event) {
