@@ -26,3 +26,14 @@ $form.on("submit", async function(event) {
         console.error("Error fetching data from Giphy API:", error);
     }
 });
+
+//are there any results?
+
+if (response.data.data.length > 0) {
+    //This gets a random gif from the results
+    const randomIdx = Math.floor(Math.ramdom() * response.data.data.length);
+    const gifUrl = response.data.data.length[randomIdx].images.original.url;
+
+    // Create img element and set src attribute the GIF URL
+    const $newGif = $("<img>", { src: gifUrl, class: "gif" });
+}
